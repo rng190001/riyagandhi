@@ -14,7 +14,7 @@ export default function Hero() {
         <span className="block">{firstName}</span>
         {lastName ? <span className="block">{lastName}</span> : null}
       </h1>
-      <p className="animate-fade-in-up animate-fade-in-up-delay-2 mt-8 max-w-2xl text-sm leading-relaxed text-zinc-400 sm:text-xl">
+      <p className="animate-fade-in-up animate-fade-in-up-delay-2 mt-8 max-w-lg text-sm leading-7 text-zinc-300 md:text-base">
         {site.tagline}
       </p>
     </section>

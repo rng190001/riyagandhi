@@ -1,5 +1,5 @@
 export const site = {
-  name: 'Riya Gandhi',
+  name: 'RIYA GANDHI',
   role: 'Software Engineer',
   tagline: 'Software engineer building production-ready web applications that solve real-world problems.',
   email: 'hello@example.com',
