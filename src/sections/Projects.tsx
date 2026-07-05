@@ -98,11 +98,12 @@ export default function Projects() {
       className="border-t border-border/60 bg-surface-elevated/40"
     >
       <div className="section-container">
-        <p className="section-label">Projects</p>
-
-        <h2 className="section-title mb-12">
-          Selected work
-        </h2>
+       <div>
+          <div className="mb-3 flex items-center gap-3">
+            <span className="h-px w-10 shrink-0 bg-white" aria-hidden="true" />
+            <p className="section-label !mb-0">Projects</p>
+          </div>
+        </div>
 
         <div>
           {projects.map((project) => (
