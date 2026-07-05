@@ -30,26 +30,52 @@ export const skills = [
 
 export const projects = [
   {
-    title: 'Project One',
+    id: "01",
+    year: 2025,
+    title: 'Spotify Spaces',
     description:
-      'A full-stack web app that solves a real problem. Replace this with your project summary, stack, and impact.',
-    tags: ['React', 'TypeScript', 'Node.js'],
+      'Who wants to wait for a spotify wrapped at the end of the year? This platform is a solution to get your user stats all day everyday!.',
+    tech: ['React', 'JavaScript', 'HTML', 'Spotify API', 'Figma', 'Next.js', 'Tailwind CSS', 'Vercel'],
     href: '#',
     github: '#',
   },
   {
-    title: 'Project Two',
+    id: "02",
+    year: 2025,
+    title: 'Machine Learning Research Project',
     description:
-      'Another highlight from your portfolio. Mention what you built, why it matters, and what you learned.',
-    tags: ['Python', 'FastAPI', 'PostgreSQL'],
+      'Visual Language Model focusing on testing different parsing techniques from generated responses',
+    tech: ['LLaVa Visual Language Model', 'Machine Learning', 'Natural Language Processing', 'HuggingFace', 'Bart', 'Cosine Similarity', 'Bert-Embeddings', 'TF-IDF Vectorization', 'NLTK', 'SpaCy', 'Python'],
+    href: '#',
+    github: '#',
+  },
+   {
+    id: "03",
+    year: 2024,
+    title: 'Sorcerers Sprouts ',
+    description:
+      '2nd Place WeHack 2024 Winner - The ultimate freshman support program designed to empower students to network, learn, and find support; ensuring a successful and fulfilling college experience.',
+    tech: ['React', 'JavaScript', 'Node.js', 'HTML', 'Tailwind CSS', 'Firebase', 'Figma', 'K-Means Clustering', 'Data Visualization'],
+    href: '#',
+    github: 'https://github.com/rng190001/Sorcerers-Sprouts',
+  },
+  {
+    id: "04",
+    title: 'Surprise Me',
+    year: 2024,
+    description:
+      'Welcome to SurpriseMe, a chatbot-driven platform designed to help users find the perfect gifts for anniversaries and Christmas! ',
+    tech: ['Natural Language Processing','Cosine Similarity', 'Bert-Model', 'TF-IDF Vectorization', 'NLTK', 'SpaCy', 'Python', 'Flask'],
     href: '#',
     github: '#',
   },
   {
-    title: 'Project Three',
+    id: "05",
+    title: 'AppliTalent',
+    year: 2021,
     description:
-      'A third project card ready for your work — open source, freelance, hackathon, or side project.',
-    tags: ['Next.js', 'Tailwind', 'Vercel'],
+      '1st place ACM Project UTD 2021 Winner - Manage and track your job or internship prospects with an intuitive web app.',
+    tech: ['React','Firebase', 'Node.js', 'JavaScript', 'HTML', 'CSS', 'Figma', 'JIRA', 'Agile Methodology'],
     href: '#',
     github: '#',
   },
@@ -57,17 +83,61 @@ export const projects = [
 
 export const experience = [
   {
-    role: 'Software Engineer',
-    company: 'Company Name',
-    period: '2024 — Present',
-    summary:
-      'Brief description of your role, team, and the kind of work you do. Focus on outcomes and technologies.',
+    role: "Software Engineer I",
+    company: "JP Morgan Chase & Co.",
+    location: "Plano, TX",
+    period: "July 2025 – Present",
+    description:
+      "Built internal developer tools used across multiple engineering teams, improving deployment workflows and reducing build times.",
+    stack: ["React", "TypeScript", "Go", "GCP"],
+    highlight: "30% faster deployments",
   },
   {
-    role: 'Software Engineer Intern',
-    company: 'Previous Company',
-    period: '2023 — 2024',
-    summary:
-      'Another role entry. Mention projects shipped, systems you improved, or metrics when possible.',
+    role: "MS, Computer Science - Intelligent Systems Track Graduate",
+    company: "University of Texas at Dallas",
+    location: "Richardson, TX",
+    period: "August 2023 – May 2025",
+    description:
+      "Built internal developer tools used across multiple engineering teams, improving deployment workflows and reducing build times.",
+    highlight: "",
+  },
+  {
+    role: "Software Engineer Intern",
+    company: "JP Morgan Chase & Co.",
+    location: "Plano, TX",
+    period: "June 2024 – August 2024",
+    description:
+      "Built internal developer tools used across multiple engineering teams, improving deployment workflows and reducing build times.",
+    stack: ["React", "TypeScript", "Go", "GCP"],
+    highlight: "30% faster deployments",
+  },
+  {
+    role: "BS, Computer Science Graduate",
+    company: "University of Texas at Dallas",
+    location: "Richardson, TX",
+    period: "August 2020 – May 2024",
+    description:
+      "Built internal developer tools used across multiple engineering teams, improving deployment workflows and reducing build times.",
+    highlight: "Magna Cum Laude Latin Honors",
+  },
+  {
+    role: "Software Engineer Intern",
+    company: "JP Morgan Chase & Co.",
+    location: "Plano, TX",
+    period: "June 2023 – August 2023",
+    description:
+      "Built internal developer tools used across multiple engineering teams, improving deployment workflows and reducing build times.",
+    stack: ["React", "TypeScript", "Go", "GCP"],
+    highlight: "30% faster deployments",
+  },
+  {
+    role: "IBM Accelerate Program Participant - Software Track",
+    company: "IBM",
+    location: "Remote",
+    period: "June 2022 – August 2022",
+    description:
+      "Built internal developer tools used across multiple engineering teams, improving deployment workflows and reducing build times.",
+    stack: ["React", "TypeScript", "Go", "GCP"],
+    highlight: "30% faster deployments",
   },
 ] as const
