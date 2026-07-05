@@ -5,8 +5,8 @@ export const site = {
   email: 'hello@example.com',
   location: 'San Francisco, CA',
   social: {
-    github: 'https://github.com/riyagandhi',
-    linkedin: 'https://linkedin.com/in/riyagandhi',
+    github: 'https://github.com/rng190001',
+    linkedin: 'https://www.linkedin.com/in/riyangandhi/',
   },
 } as const
 
