@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { experience } from "@/data/site";
+import React from "react";
 
 export default function Experience() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -121,9 +122,16 @@ export default function Experience() {
                   )}
 
                   {exp.highlight && (
-                    <p className="text-xs font-medium uppercase tracking-[0.2em] text-indigo-400">
-                      {exp.highlight}
-                    </p>
+                    <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-medium text-indigo-300">
+                      {exp.highlight.map((item: boolean | React.Key | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined> | null | undefined, index: number) => (
+                        <React.Fragment key={item}>
+                          {index > 0 && (
+                            <span className="h-1 w-1 rounded-full bg-indigo-500/60" />
+                          )}
+                          <span>{item}</span>
+                        </React.Fragment>
+                      ))}
+                    </div>
                   )}
                 </div>
               </motion.article>
@@ -138,7 +146,7 @@ export default function Experience() {
                 </p>
 
                 <p className="font-display text-6xl text-indigo-400">
-                  2020
+                  2022
                 </p>
               </div>
             </div>

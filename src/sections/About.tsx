@@ -9,16 +9,12 @@ export default function About() {
         <div className="mt-8 grid gap-10 lg:grid-cols-[1.4fr_1fr]">
           <div className="space-y-4 text-base leading-relaxed text-zinc-400">
             <p>
-              Replace this paragraph with your story — what you care about, what
-              you&apos;re currently working on, and the kind of roles or
-              collaborations you&apos;re open to.
+              I'm a software engineer who loves building products from idea to production. Over the past few years, I've shipped consumer-facing applications at JP Morgan Chase & Co, built data-driven dashboards, explored AI-powered projects, and won hackathons by combining thoughtful engineering with intuitive design.
+              I enjoy working across the frontend, collaborating closely with product and design teams, and crafting experiences that are fast, accessible, and genuinely enjoyable to use.
             </p>
             <p>
-              This starter keeps content in{' '}
-              <code className="rounded bg-surface-elevated px-1.5 py-0.5 text-sm text-indigo-300">
-                src/data/site.ts
-              </code>{' '}
-              so you can update copy without touching layout code.
+              When I'm not building for work, I'm usually designing new side projects, experimenting with emerging technologies, or finding ways to push my skills further. 
+              I'm always excited by opportunities to create products that people love and to work with teams that care deeply about craftsmanship and user experience.
             </p>
             <p className="text-sm text-zinc-500">{site.location}</p>
           </div>

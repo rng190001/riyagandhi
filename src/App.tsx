@@ -5,6 +5,7 @@ import About from '@/sections/About'
 import Projects from '@/sections/Projects'
 import Experience from '@/sections/Experience'
 import Contact from '@/sections/Contact'
+import Education from './sections/Education'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <About />
         <Projects />
         <Experience />
+        <Education/>
         <Contact />
       </main>
       <Footer />
