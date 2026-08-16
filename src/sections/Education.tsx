@@ -62,11 +62,11 @@ export default function Education() {
                 </span>
               </div>
 
-              {item.track && (
+              {/* {item.track && (
                 <p className="mt-2 text-sm text-zinc-400">
                   {item.track}
                 </p>
-              )}
+              )} */}
 
               <p className="mt-6 leading-7 text-zinc-400">
                 {item.description}

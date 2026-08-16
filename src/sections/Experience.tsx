@@ -121,18 +121,18 @@ export default function Experience() {
                     </div>
                   )}
 
-                  {exp.highlight && (
-                    <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-medium text-indigo-300">
-                      {exp.highlight.map((item: boolean | React.Key | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined> | null | undefined, index: number) => (
-                        <React.Fragment key={item}>
-                          {index > 0 && (
-                            <span className="h-1 w-1 rounded-full bg-indigo-500/60" />
-                          )}
-                          <span>{item}</span>
-                        </React.Fragment>
-                      ))}
-                    </div>
-                  )}
+                 {exp.highlight && (
+                  <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-medium text-indigo-300">
+                    {exp.highlight.map((item, index) => (
+                      <React.Fragment key={`${item}-${index}`}>
+                        {index > 0 && (
+                          <span className="h-1 w-1 rounded-full bg-indigo-500/60" />
+                        )}
+                        <span>{item}</span>
+                      </React.Fragment>
+                    ))}
+                  </div>
+                )}
                 </div>
               </motion.article>
             ))}

@@ -6,7 +6,7 @@ import { projects } from "@/data/site";
 function ProjectRow({
   project,
 }: {
-  project: (typeof projects)[0];
+  project: (typeof projects)[number];
 }) {
   const [hovered, setHovered] = useState(false);
 
@@ -81,11 +81,11 @@ function ProjectRow({
         }}
         className="overflow-hidden"
       >
-        <img
+        {/* <img
           src={project.image}
           alt={project.title}
           className="h-[250px] w-full object-cover rounded-lg"
-        />
+        /> */}
       </motion.div>
     </a>
   );
