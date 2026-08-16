@@ -47,8 +47,8 @@ export const projects = [
     description:
       'Who wants to wait for a spotify wrapped at the end of the year? This platform is a solution to get your user stats all day everyday!.',
     tech: ['React', 'JavaScript', 'HTML', 'Spotify API', 'Figma', 'Next.js', 'Tailwind CSS', 'Vercel'],
-    href: '#',
-    github: '#',
+    href: 'https://github.com/rng190001/SpotifySpaces',
+    github: 'https://github.com/rng190001/SpotifySpaces',
   },
   {
     id: "02",
@@ -57,7 +57,7 @@ export const projects = [
     description:
       'Visual Language Model focusing on testing different parsing techniques from generated responses',
     tech: ['LLaVa Visual Language Model', 'Machine Learning', 'Natural Language Processing', 'HuggingFace', 'Bart', 'Cosine Similarity', 'Bert-Embeddings', 'TF-IDF Vectorization', 'NLTK', 'SpaCy', 'Python'],
-    href: '#',
+    href: 'https://github.com/rng190001/CS6375-ResearchProject',
     github: '#',
   },
    {
@@ -67,7 +67,7 @@ export const projects = [
     description:
       '2nd Place WeHack 2024 Winner - The ultimate freshman support program designed to empower students to network, learn, and find support; ensuring a successful and fulfilling college experience.',
     tech: ['React', 'JavaScript', 'Node.js', 'HTML', 'Tailwind CSS', 'Firebase', 'Figma', 'K-Means Clustering', 'Data Visualization'],
-    href: '#',
+    href: 'https://github.com/rng190001/Sorcerers-Sprouts',
     github: 'https://github.com/rng190001/Sorcerers-Sprouts',
   },
   {
@@ -77,8 +77,8 @@ export const projects = [
     description:
       'Welcome to SurpriseMe, a chatbot-driven platform designed to help users find the perfect gifts for anniversaries and Christmas! ',
     tech: ['Natural Language Processing','Cosine Similarity', 'Bert-Model', 'TF-IDF Vectorization', 'NLTK', 'SpaCy', 'Python', 'Flask'],
-    href: '#',
-    github: '#',
+    href: 'https://github.com/rng190001/SurpriseMe',
+    github: 'https://github.com/rng190001/SurpriseMe',
   },
   {
     id: "05",
@@ -87,8 +87,8 @@ export const projects = [
     description:
       '1st place ACM Project UTD 2021 Winner - Manage and track your job or internship prospects with an intuitive web app.',
     tech: ['React','Firebase', 'Node.js', 'JavaScript', 'HTML', 'CSS', 'Figma', 'Jira', 'Agile Methodology'],
-    href: '#',
-    github: '#',
+    href: 'https://github.com/rng190001/AppliTalent',
+    github: 'https://github.com/rng190001/AppliTalent',
   },
 ] as const
 
@@ -100,11 +100,11 @@ export const experience = [
     period: "July 2025 – Present",
     description:
       "Working on a consumer-facing web application from its initial launch through multiple production releases. I build performant React features, architect reusable frontend components, integrate AWS cloud-backed APIs, and partner with cross-functional teams to create intuitive user experiences at scale.",
-    stack: ["React", "TypeScript", "AWS", "Jest", "Figma", "JIRA", "Agile Methodology", "Frontend Development"],
+    stack: ["React", "TypeScript", "AWS", "Jest", "Jenkins", "Figma", "JIRA", "Agile Methodology", "Frontend Development"],
     highlight: [
       "Day 1 Team",
       "3+ Production Releases",
-      "500+ Users",
+      "300+ Users",
       "Consumer-Facing Product",
     ],
   },
@@ -200,7 +200,6 @@ export const education = [
     school: "University of Texas at Dallas",
     location: "Richardson, TX",
     period: "August 2023 – May 2025",
-    track: "Intelligent Systems",
     description:
       "Specialized in Intelligent Systems with coursework spanning machine learning, natural language processing, and artificial intelligence. The program deepened my understanding of building intelligent systems while complementing my passion for creating scalable, user-centered software.",
     coursework: ["Machine Learning", "Natural Language Processing", "Artificial Intelligence", "Statistical Learning", "Human Computer Interaction", "Project Management"],
@@ -211,7 +210,6 @@ export const education = [
     school: "University of Texas at Dallas",
     location: "Richardson, TX",
     period: "August 2020 – May 2024",
-    track: "",
     description:
       "Graduated Magna Cum Laude while building a strong foundation in software engineering, algorithms, and systems. Outside the classroom, I led student organizations, mentored aspiring engineers, won hackathons, and built full-stack applications through competitive and collaborative projects.",
     coursework: ["Data Structures and Algorithms", "Database Systems", "Operating Systems", "Software Engineering", "Digital Logic", "Psychology", "Advanced Algorithm Design & Analysis", "Intro to Artificial Intelligence", "Intro to Machine Learning"],
@@ -219,7 +217,7 @@ export const education = [
       "Magna Cum Laude",
       "SWE CLI 2023-2024",
       "Women Mentoring Women in Engineering Leadership",
-      "ACM Projects 1st Place",
+      "ACM Projects 1st Place Winner",
     ],
   },
 ] as const;
