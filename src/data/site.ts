@@ -99,12 +99,12 @@ export const experience = [
     location: "Plano, TX (Onsite)",
     period: "July 2025 – Present",
     description:
-      "Working on a consumer-facing web application from its initial launch through multiple production releases. I build performant React features, architect reusable frontend components, integrate AWS cloud-backed APIs, and partner with cross-functional teams to create intuitive user experiences at scale.",
+      "Working on 2 consumer-facing web applications from their initial launch through multiple production releases. I build performant React features, architect reusable frontend components, integrate AWS cloud-backed APIs, and partner with cross-functional teams to create intuitive user experiences at scale.",
     stack: ["React", "TypeScript", "AWS", "Jest", "Jenkins", "Figma", "JIRA", "Agile Methodology", "Frontend Development"],
     highlight: [
       "Day 1 Team",
-      "3+ Production Releases",
-      "300+ Users",
+      "7+ Major Production Releases",
+      "10,000+ Users",
       "Consumer-Facing Product",
     ],
   },
