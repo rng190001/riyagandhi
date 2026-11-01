@@ -1,177 +1,110 @@
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { experience } from "@/data/site";
-import React from "react";
 
 export default function Experience() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  const totalCards = experience.length;
-  const cardWidth = 460;
-  const gap = 48;
-  const maxShift = (cardWidth + gap) * (totalCards - 1);
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end end"],
-  });
-
-  const x = useTransform(scrollYProgress, [0, 1], [0, -maxShift]);
-
   return (
     <section
       id="experience"
-      ref={sectionRef}
-      className="relative border-t border-border/60"
-      style={{
-        height: `${100 + totalCards * 65}vh`,
-      }}
+      className="section-container border-t border-border/60 py-24 sm:py-28"
     >
-      <div className="sticky top-0 flex h-screen flex-col overflow-hidden bg-surface">
-        {/* Header */}
-        <div className="flex items-center justify-between px-6 pt-16 pb-10 sm:px-8 lg:px-12">
-         <div>
+      <div className="mb-12 flex flex-col gap-4 sm:mb-16 sm:flex-row sm:items-end sm:justify-between">
+        <div>
           <div className="mb-3 flex items-center gap-3">
             <span className="h-px w-10 shrink-0 bg-white" aria-hidden="true" />
             <p className="section-label !mb-0">Experience</p>
           </div>
+          <h2 className="font-display text-4xl font-semibold text-white sm:text-5xl">
+            Where I’ve built
+          </h2>
         </div>
+        <p className="max-w-md text-sm leading-7 text-zinc-400">
+          From enterprise product teams to smaller engineering environments,
+          I enjoy turning user needs into thoughtful, dependable software.
+        </p>
+      </div>
 
-          <motion.div className="hidden md:block w-40 h-[2px] bg-border overflow-hidden rounded-full">
-            <motion.div
-              className="h-full bg-indigo-400"
-              style={{
-                scaleX: scrollYProgress,
-                transformOrigin: "left",
-              }}
-            />
-          </motion.div>
-        </div>
+      <div className="relative space-y-5">
+        <div
+          className="absolute bottom-8 left-[7px] top-8 hidden w-px bg-border sm:block"
+          aria-hidden="true"
+        />
 
-        {/* Cards */}
-        <div className="flex flex-1 items-center overflow-hidden px-6 sm:px-8 lg:px-12">
-          <motion.div
-            className="flex gap-12"
-            style={{ x }}
-          >
-            {experience.map((exp, index) => (
-              <motion.article
-                key={`${exp.company}-${exp.period}`}
-                className="flex shrink-0 flex-col justify-between rounded-2xl border border-border bg-surface-elevated p-8 transition"
-                style={{
-                  width: "min(460px,85vw)",
-                  minHeight: 380,
-                }}
-                whileHover={{
-                  y: -8,
-                  scale: 1.02,
-                  borderColor: "rgb(129 140 248)",
-                }}
-              >
-                {/* Top */}
+        {experience.map((exp, index) => {
+          const isCurrentRole = index === 0;
 
-                <div>
-                  <div className="mb-6 flex items-center justify-between">
-                    <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
+          return (
+            <motion.article
+              key={`${exp.company}-${exp.period}`}
+              initial={{ opacity: 0, y: 22 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.45, delay: Math.min(index * 0.06, 0.24) }}
+              className={`relative rounded-2xl border p-6 transition-colors sm:p-8 ${
+                isCurrentRole
+                  ? "border-indigo-400/50 bg-indigo-400/[0.06] sm:ml-0"
+                  : "border-border bg-surface-elevated sm:ml-10"
+              }`}
+            >
+              <span
+                className={`absolute -left-[1.95rem] top-10 hidden h-3 w-3 rounded-full border-2 sm:block ${
+                  isCurrentRole
+                    ? "border-indigo-300 bg-indigo-400"
+                    : "border-zinc-600 bg-surface"
+                }`}
+                aria-hidden="true"
+              />
+
+              <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+                <div className="min-w-0 flex-1">
+                  <div className="mb-4 flex flex-wrap items-center gap-3">
+                    <span className="text-xs uppercase tracking-[0.18em] text-zinc-500">
                       {exp.period}
                     </span>
-
-                    <span className="text-xs text-indigo-400">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                  </div>
-
-                  <h3 className="font-display text-3xl font-semibold text-white">
-                    {exp.role}
-                  </h3>
-
-                  <div className="mt-2 flex items-center gap-2 text-sm">
-                    <span className="font-medium text-indigo-400">
-                      {exp.company}
-                    </span>
-
-                    {exp.location && (
-                      <>
-                        <span className="text-zinc-600">•</span>
-                        <span className="text-zinc-500">
-                          {exp.location}
-                        </span>
-                      </>
+                    {isCurrentRole && (
+                      <span className="rounded-full border border-indigo-400/40 bg-indigo-400/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-indigo-300">
+                        Current role
+                      </span>
                     )}
                   </div>
 
-                  <p className="mt-6 leading-relaxed text-zinc-400">
+                  <h3 className="font-display text-2xl font-semibold text-white sm:text-3xl">
+                    {exp.role}
+                  </h3>
+                  <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
+                    <span className="font-medium text-indigo-300">{exp.company}</span>
+                    <span className="text-zinc-600" aria-hidden="true">·</span>
+                    <span className="text-zinc-500">{exp.location}</span>
+                  </div>
+                  <p className="mt-5 max-w-3xl text-sm leading-7 text-zinc-300 sm:text-base">
                     {exp.description}
                   </p>
                 </div>
 
-                {/* Bottom */}
-
-                <div className="mt-8 border-t border-border pt-6">
-                  {exp.stack && (
-                    <div className="mb-5 flex flex-wrap gap-2">
-                      {exp.stack.map((tech: string) => (
-                        <span
-                          key={tech}
-                          className="rounded-md border border-border px-2 py-1 text-xs text-zinc-400"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-
-                 {exp.highlight && (
-                  <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-medium text-indigo-300">
-                    {exp.highlight.map((item, index) => (
-                      <React.Fragment key={`${item}-${index}`}>
-                        {index > 0 && (
-                          <span className="h-1 w-1 rounded-full bg-indigo-500/60" />
-                        )}
-                        <span>{item}</span>
-                      </React.Fragment>
-                    ))}
-                  </div>
-                )}
+                <div className="flex flex-wrap gap-2 lg:max-w-xs lg:justify-end">
+                  {exp.highlight.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full border border-border/80 px-3 py-1.5 text-xs text-zinc-400"
+                    >
+                      {item}
+                    </span>
+                  ))}
                 </div>
-              </motion.article>
-            ))}
-
-            {/* End Card */}
-
-            <div className="flex w-64 shrink-0 items-center justify-center">
-              <div className="text-center">
-                <p className="mb-3 text-xs uppercase tracking-[0.3em] text-zinc-500">
-                  Building since
-                </p>
-
-                <p className="font-display text-6xl text-indigo-400">
-                  2022
-                </p>
               </div>
-            </div>
-          </motion.div>
-        </div>
 
-        {/* Bottom indicator */}
-
-        <div className="px-6 py-6 sm:px-8 lg:px-12">
-          <div className="flex items-center gap-3">
-            <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-              Scroll
-            </span>
-
-            <div className="h-[2px] w-40 overflow-hidden rounded-full bg-border">
-              <motion.div
-                className="h-full bg-indigo-400"
-                style={{
-                  scaleX: scrollYProgress,
-                  transformOrigin: "left",
-                }}
-              />
-            </div>
-          </div>
-        </div>
+              <div className="mt-7 flex flex-wrap gap-2 border-t border-border/70 pt-5">
+                {exp.stack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-md bg-black/20 px-2.5 py-1.5 text-xs text-zinc-400"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </motion.article>
+          );
+        })}
       </div>
     </section>
   );
