@@ -1,7 +1,7 @@
 export const site = {
   name: 'RIYA GANDHI',
   role: 'Software Engineer',
-  tagline: 'Software engineer building production-ready web applications that solve real-world problems.',
+  tagline: 'I build consumer-facing web applications with React, TypeScript, and cloud-backed services—bringing product ideas from implementation to production.',
   email: 'griya2001@gmail.com',
   location: 'Based in Plano, TX',
   social: {
@@ -99,13 +99,13 @@ export const experience = [
     location: "Plano, TX (Onsite)",
     period: "July 2025 – Present",
     description:
-      "Working on 2 consumer-facing web applications from their initial launch through multiple production releases. I build performant React features, architect reusable frontend components, integrate AWS cloud-backed APIs, and partner with cross-functional teams to create intuitive user experiences at scale.",
-    stack: ["React", "TypeScript", "AWS", "Jest", "Jenkins", "Figma", "JIRA", "Agile Methodology", "Frontend Development"],
+      "Build and ship features across two consumer-facing web applications, contributing from product implementation through production releases. Develop reusable React and TypeScript components, integrate AWS-backed APIs, and work closely with product and design partners to deliver intuitive, reliable user experiences.",
+    stack: ["React", "TypeScript", "AWS", "Jest", "Jenkins", "Figma", "JIRA", "Agile Methodology"],
     highlight: [
-      "Day 1 Team",
-      "7+ Major Production Releases",
-      "10,000+ Users",
-      "Consumer-Facing Product",
+      "2 Consumer-Facing Applications",
+      "Production Feature Delivery",
+      "Reusable React Components",
+      "Cross-Functional Product Work",
     ],
   },
   {
