@@ -10,7 +10,7 @@ export default function About() {
           <div className="space-y-4 text-base leading-relaxed text-zinc-400">
             <p>
               I'm a software engineer who loves building products from idea to production. Over the past few years, I've shipped consumer-facing applications at JP Morgan Chase & Co, built data-driven dashboards, explored AI-powered projects, and won hackathons by combining thoughtful engineering with intuitive design.
-              I enjoy working across the frontend, collaborating closely with product and design teams, and crafting experiences that are fast, accessible, and genuinely enjoyable to use.
+              I enjoy working across frontend, collaborating closely with product and design teams, and crafting experiences that are fast, accessible, and genuinely enjoyable to use.
             </p>
             <p>
               When I'm not building for work, I'm usually designing new side projects, experimenting with emerging technologies, or finding ways to push my skills further. 
