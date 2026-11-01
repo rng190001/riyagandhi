@@ -94,7 +94,7 @@ export default function Projects() {
             <p className="section-label !mb-0">Selected work</p>
           </div>
           <h2 className="font-display text-4xl font-semibold text-white sm:text-5xl">
-            Projects & experiments
+            Projects
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-400">
             A selection of product builds and technical explorations across
